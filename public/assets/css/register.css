@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* WARNA UTAMA */
+:root {
+    --teal: #0d9f91;
+    --teal-dark: #087f78;
+    --green: #2ce878;
+    --text: #344054;
+    --muted: #667085;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #11998e,
+        #08796f
+    );
+}
+
+/* CONTAINER UTAMA */
+.register-container {
+    width: 1080px;
+    max-width: 100%;
+    min-height: 690px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+
+    background: white;
+    border-radius: 26px;
+
+    box-shadow: 0 24px 65px rgba(0, 45, 42, 0.24);
+}
+
+/* BAGIAN KIRI */
+.hero-panel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 139, 121, 0.55),
+            rgba(0, 66, 57, 0.72)
+        ),
+        url("../img/papandayan.jpeg") center / cover no-repeat,
+        linear-gradient(135deg, #52b99b, #125b4d);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* BAGIAN FORM */
+.form-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 35px 48px;
+}
+
+/* LOGO */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    margin-bottom: 20px;
+
+    color: #18334a;
+    font-size: 14px;
+}
+
+.brand strong,
+.brand small {
+    display: block;
+}
+
+.brand small {
+    margin-top: 2px;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.brand-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+    background: #079b63;
+}
+
+/* JUDUL */
+h2 {
+    text-align: center;
+
+    color: var(--teal);
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: var(--muted);
+    font-size: 13px;
+
+    margin-bottom: 22px;
+}
+
+/* FORM */
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* INPUT */
+.input-group {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+    padding: 0 15px;
+
+    border: 1px solid #d5d8dc;
+    border-radius: 28px;
+
+    transition: 0.2s;
+}
+
+.input-group:focus-within {
+    border-color: var(--teal);
+
+    box-shadow: 0 0 0 3px
+        rgba(13, 159, 145, 0.12);
+}
+
+/* IKON INPUT */
+.input-icon {
+    color: var(--teal);
+    font-size: 18px;
+
+    min-width: 16px;
+}
+
+/* KOLOM INPUT */
+.input-group input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.input-group input::placeholder {
+    color: #737b87;
+}
+
+/* TOMBOL LIHAT PASSWORD */
+.show-password {
+    border: none;
+    background: transparent;
+
+    color: var(--teal-dark);
+    font-family: inherit;
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+/* CHECKBOX */
+.terms {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+    margin: 3px;
+
+    color: #505866;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.terms input {
+    margin-top: 4px;
+    accent-color: var(--teal);
+}
+
+/* TOMBOL DAFTAR */
+.submit-button {
+    width: 100%;
+    min-height: 49px;
+
+    border: none;
+    border-radius: 28px;
+
+    margin-top: 4px;
+
+    background: linear-gradient(
+        100deg,
+        #0b9f91,
+        #2ce878
+    );
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* LINK LOGIN */
+.login-link {
+    text-align: center;
+
+    color: var(--muted);
+    font-size: 13px;
+
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: var(--teal);
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* PESAN VALIDASI */
+.message {
+    text-align: center;
+    font-size: 12px;
+
+    margin-top: 12px;
+}
+
+.message.error {
+    color: #c62828;
+}
+
+.message.success {
+    color: #087f48;
+}
+
+/* RESPONSIVE UNTUK TABLET DAN HP */
+@media (max-width: 760px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .register-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+
+        border-radius: 20px;
+    }
+
+    .hero-panel {
+        min-height: 190px;
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .form-panel {
+        padding: 30px 24px;
+    }
+
+}
+
+/* RESPONSIVE UNTUK HP KECIL */
+@media (max-width: 380px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .form-panel {
+        padding: 25px 16px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+}
