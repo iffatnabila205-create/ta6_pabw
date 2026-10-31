@@ -36,6 +36,7 @@
     <a href="{{ route('paket') }}">Paket</a>
     <a href="{{ route('peta') }}">Peta</a>
     <a href="{{ route('laporan') }}">Laporan</a>
+    <a href="{{ route('galeri.index') }}">Galeri</a>
     <a href="{{ route('kontak') }}">Kontak</a>
   </nav>
 

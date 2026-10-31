@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GaleriController;
 use Illuminate\Support\Facades\Route;
 
 // Halaman depan (publik)
@@ -31,6 +32,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/kontak', [ContactController::class, 'store'])->name('kontak.store');
     Route::view('/pembayaran', 'pages.pembayaran')->name('pembayaran');
     Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+
+    // CRUD Galeri Wisata (dengan upload foto) — dilindungi middleware auth
+    Route::get('/galeri/{galeri}/unduh', [GaleriController::class, 'unduh'])->name('galeri.unduh');
+    Route::resource('galeri', GaleriController::class);
 });
 
 // Admin
